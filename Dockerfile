@@ -13,9 +13,10 @@ MAINTAINER Florent Peyron <florentpeyron@gmail.com>
 # Install golang and make
 USER root
 RUN \
-  apt-get -yqq update && \
-  apt-get -yq install sbt make golang && \
-  rm -rf /var/lib/apt/lists/*
+  apt-get update && \
+  apt-get install sbt make golang
+  #&& \
+  #rm -rf /var/lib/apt/lists/*
 
 # Install amazon-ecr-credential-helper
 USER root
