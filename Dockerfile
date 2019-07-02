@@ -7,11 +7,13 @@
 # Pull base image
 FROM hseeberger/scala-sbt:11.0.2_2.12.8_1.2.8
 
+MAINTAINER Florent Peyron <florentpeyron@gmail.com>
+
 
 # Install golang and make
 USER root
 RUN \
-  apt-get update && \
+  apt-get -yqq update && \
   apt-get -yq install sbt make golang && \
   rm -rf /var/lib/apt/lists/*
 

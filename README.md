@@ -17,6 +17,11 @@ This repository contains **Dockerfile** of [Scala](http://www.scala-lang.org) an
 docker pull florentpeyron/scala-sbt/scala-sbt-ecr
 ```
 
+Alternatively, you can build an image from Dockerfile: 
+```
+docker build -t fpeyron/scala-sbt-ecr github.com/fpeyron/scala-sbt-ecr
+``
+
 
 ```
 docker build -t florentpeyron/scala-sbt-ecr:latest .
@@ -26,7 +31,7 @@ docker build -t florentpeyron/scala-sbt-ecr:latest .
 ## Usage ##
 
 ```
-docker run -it --rm -v /Users/florentpeyron/dev/swan/swan-ledger:/opt  517903064498.dkr.ecr.eu-west-3.amazonaws.com/io.swan/scala-sbt:latest /bin/bash
+docker run -it --rm -v /Users/florentpeyron/dev/swan/swan-ledger:/opt fpeyron/scala-sbt-ecr:latest /bin/bash
 ```
 
 ### Alternative commands ###
